@@ -18,3 +18,69 @@ Text Domain:	 child-theme-oceanwp
     max-width: 1200px;
     margin: 0 auto;
 } */
+
+.bbp-reply-form .bbp-form .wp-editor-tools .wp-editor-tabs,
+.bbp-topic-form .bbp-form .wp-editor-tools .wp-editor-tabs
+{
+    display: flex;
+}
+​
+/* AUthor reply section ================================================ */
+#bbpress-forums div.bbp-reply-author img.avatar{
+    width: 80%;
+    border-radius: 50%;
+}
+#bbpress-forums div.bbp-reply-author p{
+    margin: 10px;
+}
+#bbpress-forums li.bbp-body .bbp-reply-author .bbp-author-name{
+	font-size:13px;
+	font-weight:600;
+	margin: 10px 0 0 0  
+}
+#bbpress-forums li.bbp-body .bbp-reply-author .bbp-author-role{
+	margin-top: -10px;
+	font-size:12px;
+font-weight:500;
+}
+#bbpress-forums li.bbp-body .bbp-reply-author{
+	margin-top: 20px;
+    width: 130px;
+}
+#bbpress-forums li.bbp-body .bbp-reply-content{
+    margin-left:150px;
+    font-size: 14px;
+}
+#bbpress-forums .bbp-replies li.bbp-header .bbp-reply-author
+{
+	margin-top:20px;
+}
+#bbpress-forums .bbp-reply-form .bbp-form p.bbp-attachments-form,
+#bbpress-forums fieldset.bbp-form p.bbp-attachments-form
+{
+	float:left !important;
+	margin-top:-20px  !important;
+}
+#bbpress-forums .bbp-reply-form .bbp-form .bbp-submit-wrapper{
+	float:left;
+	margin-top:0;
+}
+#bbpress-forums .bbp-topic-form .bbp-form .bbp-submit-wrapper{
+    float: left;
+}
+/* Home page css customized */
+/* .cpm-rw-eventcalender .elementor-widget-container p{
+	text-align:left !important;
+} */
+#bbpress-forums .bbp-topic-form .bbp-form{
+    text-align: center;
+}
+#bbpress-forums .bbp-topic-form .bbp-form  label,
+#bbpress-forums .bbp-topic-form .bbp-form #bbp_topic_subscription
+​
+{
+    float: left;
+}
+#bbpress-forums .bbp-form fieldset.bbp-form{
+	text-align:left;
+}
