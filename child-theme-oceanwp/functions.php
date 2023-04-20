@@ -37,7 +37,5 @@ add_filter('bbp_after_get_the_content_parse_args', function($args = array()){
     return $args;
 });
 
-// add_action('bbp_theme_before_reply_author_details',function(){
-// 	echo do_shortcode('[wp_ulike style="wp-ulike-pro-default"]',false);
-// 	echo 'check';
-// });
+
+include('registerSidebarLatestTopic.php');
