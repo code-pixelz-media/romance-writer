@@ -102,5 +102,5 @@ defined('ABSPATH') || exit;
 		</li>
 
 	</ul>
-
+				
 <!-- #bbp-topic-<?php bbp_topic_id(); ?> -->
