@@ -51,9 +51,7 @@ font-weight:500;
 #bbpress-forums li .bbp-topic-permalink{
     font-size: 14px;
 }
-#bbpress-forums li.bbp-body .bbp-topic-voice-count{
-   
-}
+
 #bbpress-forums li.bbp-body .bbp-reply-author{
 	margin-top: 20px;
     width: 130px;
@@ -62,10 +60,10 @@ font-weight:500;
     margin-left:150px;
     font-size: 14px;
 }
-#bbpress-forums .bbp-replies li.bbp-header .bbp-reply-author
+/* #bbpress-forums .bbp-replies li.bbp-header .bbp-reply-author
 {
 	margin-top:20px;
-}
+} */
 #bbpress-forums .bbp-reply-form .bbp-form p.bbp-attachments-form,
 #bbpress-forums fieldset.bbp-form p.bbp-attachments-form
 {
@@ -118,24 +116,27 @@ font-weight:500;
 	border-left:2px solid #eeeeee;
 	display:block;
 	height:120px;
-	margin-right:20px
+	margin-right:10px
 }
 #bbpress-forums ul li.bbp-body .bbp-topic-voice-count::after{
 	content:'';
 	border-left:2px solid #eeeeee;
 	display:block;
 	height:120px;
-	margin-left:20px
+	margin-left:10px
 }
 #bbpress-forums ul.forum-titles .bbp-topic-voice-count{
     font-size: 15px;
+}
+#bbpress-forums li .bbp-topic-permalink,
+#bbpress-forums .bbp-body .bbp-topic-title .bbp-topic-started-by{
+	padding: 15px;
 }
 
 #bbpress-forums ul li.bbp-topic-voice-count{
 	display:flex;
 	align-items:center;
 }
-
 #bbpress-forums li.bbp-body ul.topic,
 #bbpress-forums li.bbp-body ul.topic,
 #bbpress-forums li.bbp-header{
@@ -144,7 +145,7 @@ font-weight:500;
 #bbpress-forums .bbp-body> p{
 	display:none;
 }
-#bbpress-forums ul#bbp-forum-411 {
+#bbpress-forums ul.bbp-topics ul {
 	border-top:2px solid #eeeeee;
 	border-left:2px solid #eeeeee;
 	border-right:2px solid #eeeeee;
@@ -158,8 +159,15 @@ font-weight:500;
 }
 
 #bbpress-forums .bbp-topic-freshness .bbp-topic-freshness-author img{
-	float:right;
-	margin-right:-30px;
+	float:right !important;
+	margin-right:-25px !important;
+	/* width: 100%; */
+	border-radius: 50%;
+	
+}
+#bbpress-forums li.bbp-body .bbp-topic-started-by .bbp-author-avatar img{
+	/* width: 100%; */
+	border-radius: 50%;
 }
 #bbpress-forums .bbp-topic-freshness p  a{
 	margin-right:10px
@@ -171,4 +179,36 @@ font-weight:500;
 #bbpress-forums .bbp-header ul.forum-titles{
     padding: 20px;
     font-size: 15px;
+}
+#bbpress-forums #bbp-forum-411 .bbp-body .bbp-topic-sticky,
+#bbpress-forums #bbp-forum-411 .bbp-body .bbp-topic-normal{
+	font-size: 16px;
+    font-weight: 600;
+    color: #1c5cb5;
+}
+#bbpress-forums #bbp-forum-411 .bbp-body ul{
+	display: flex;
+	align-items: center;
+}
+#bbpress-forums .bbp-body .bbp-topic-title::before,
+#bbpress-forums .bbp-body .bbp-topic-title .bbp-attachments-count{
+	display: none;
+}
+
+
+/*Chnaging the main forum table i.e romancewiter/forums ============ */
+#bbpress-forums  .bbp-body .bbp-forum-freshness img{
+	float: right;
+	margin-left: 10px;
+}
+#bbpress-forums  .bbp-body .bbp-forum-freshness p a{
+	margin-right:10px;
+}
+
+/* Inside topics of a Forum */
+#bbpress-forums  .bbp-body .bbp-topic-voice-count p{
+	margin: 0px;
+}
+#bbpress-forums  .bbp-body .bbp-topic-title p{
+	margin: 0px;
 }
