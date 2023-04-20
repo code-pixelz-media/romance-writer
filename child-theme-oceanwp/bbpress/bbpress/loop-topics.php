@@ -24,16 +24,24 @@ do_action( 'bbp_template_before_topics_loop' ); ?>
 			<li class="bbp-topic-freshness"><?php esc_html_e( 'Last Post', 'bbpress' ); ?></li>
 		</ul>
 	</li>
-
+	<!-- differntiating sticky topic and normal topic -->
 	<li class="bbp-body">
 
+		<span class="bbp-topic-sticky">Sticky Topic</span>
 		<?php while ( bbp_topics() ) : bbp_the_topic(); ?>
-
-			<?php bbp_get_template_part( 'loop', 'single-topic' ); ?>
-
+			<?php if (bbp_is_topic_sticky()) : ?>
+				<?php bbp_get_template_part( 'loop', 'single-topic' ); ?>
+			<?php endif; ?>
+		<?php endwhile; ?>
+<hr>
+		<span class="bbp-topic-normal">Normal Topic</span>
+		<?php while ( bbp_topics() ) : bbp_the_topic(); ?>
+			<?php if (!bbp_is_topic_sticky()) : ?>
+				<?php bbp_get_template_part( 'loop', 'single-topic' ); ?>
+			<?php endif; ?>
 		<?php endwhile; ?>
 
-	</li>
+</li>
 
 	<li class="bbp-footer">
 		<div class="tr">
