@@ -8,24 +8,6 @@ function child_theme_oceanwp_enqueue_styles()
 }
 
 
-// add_filter('bbp_get_the_content', 'comment_tinymce_form_defaults', 999, 2);
-function comment_tinymce_form_defaults($args) {
-	ob_start();
-	wp_editor( '', 'comment', array(
-		'wpautop' => true,
-		'media_buttons' => true,
-		'textarea_rows' => '10',
-		// 'dfw' => true,
-		// 'default_editor' => false,
-		// 'drag_drop_upload' => true,
-		'teeny' => true,
-		'quicktags' => true,
-		'tinymce' => array('bold,italic,underline,strikethrough,bullist,numlist,code,blockquote,link,unlink,outdent,indent,|,undo,redo,fullscreen')
-	) );
-	$args = ob_get_clean();
-	return $args;
-}
-
 add_filter('bbp_after_get_the_content_parse_args', function($args = array()){
     $args['tinymce'] = true;
     $args['teeny'] = false;
@@ -38,4 +20,16 @@ add_filter('bbp_after_get_the_content_parse_args', function($args = array()){
 });
 
 
-// include('registerSidebarLatestTopic.php');
+// registering custom sidebar
+// add_action( 'widgets_init', 'latest_topic_widgets' );
+// function latest_topic_widgets() {
+//     register_sidebar( array(
+//         'name' => __( 'Latest_topic', 'latest-topic' ),
+//         'id' => 'latest-topic',
+//         'description' => __( 'Widgets in this area will be shown on topic.', 'latest-topic' ),
+//         'before_widget' => '<li id="%1$s" class="widget %2$s">',
+//     'after_widget'  => '</li>',
+//     'before_title'  => '<h2 class="widgettitle">',
+//     'after_title'   => '</h2>',
+//     ) );
+// }
