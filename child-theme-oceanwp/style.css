@@ -194,6 +194,17 @@ font-weight:500;
 #bbpress-forums .bbp-body .bbp-topic-title .bbp-attachments-count{
 	display: none;
 }
+#bbpress-forums .bbp-topic-freshness p a{
+	display:flex;
+	float:right;
+	align-items: center;
+}
+#bbpress-forums .bbp-topic-freshness p a span:nth-of-type(1){
+	order:2;
+}
+#bbpress-forums .bbp-topic-freshness p a span:nth-of-type(2){
+	order:1;
+}
 
 
 /*Chnaging the main forum table i.e romancewiter/forums ============ */
@@ -211,4 +222,81 @@ font-weight:500;
 }
 #bbpress-forums  .bbp-body .bbp-topic-title p{
 	margin: 0px;
+}
+#bbpress-forums li.bbp-topic-freshness{
+	padding: 20px;
+}
+#bbpress-forums .bbp-all-topics .bbp-topics li.bbp-body .normal_section .bbp-topic-normal,
+#bbpress-forums .bbp-all-topics .bbp-topics .sticky_section span{
+	color: #1c5cb5;
+	font-size:16px;
+	font-weight: 600;
+}
+
+
+
+
+
+@media  screen and (max-width:600px) {
+	#bbpress-forums ul.forum-titles .bbp-topic-voice-count,
+	#bbpress-forums ul li.bbp-topic-voice-count,
+	#bbpress-forums .bbp-body li.bbp-topic-freshness,
+	#bbpress-forums li.bbp-topic-freshness {
+		display: none;
+	}
+}
+@media screen and (max-width:424px) {
+	.clr .single-page-article .bbp-forums .bbp-forum-topic-count,
+	.clr .single-page-article .bbp-forums .bbp-forum-reply-count{
+		display: none;
+	}
+
+}
+@media  screen and (max-width:360px) { /*Create new topic button in General forum */
+	#bbpress-forums div.bsp-one-half{
+		width:100%;
+	}
+}
+
+@media screen and (max-width:424px) {
+	#bbpress-forums li a.bbp-topic-permalink{
+		display: flex;
+	}
+}
+
+/*Styling the sidebar ==================== */
+/* #bbpress-forums .bbp-all-topics{
+	display: flex;
+	width: 100%;
+}
+#bbpress-forums .bbp-all-topics .bbp-topics{
+	width: 80%;
+}
+#bbpress-forums .bbp-all-topics .bbp-latest-topics{
+	width: 20%;
+}
+#bbpress-forums .bbp-all-topics .bbp-latest-topics #bbp_topics_widget-3{
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1),0px 4px 15px -3px rgba(0,0,0,0.1);
+	padding: 10px 20px 0px 20px;
+	margin-top: 10px;
+}
+#bbpress-forums .bbp-all-topics .bbp-latest-topics h2.widgettitle{
+	border-bottom: 2px solid #dbdbdb;
+	margin-bottom: 20px;
+} */
+
+.clr .sidebar-container #right-sidebar-inner #bbp_topics_widget-3 {
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1),0px 4px 15px -3px rgba(0,0,0,0.1);
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+}
+.clr .sidebar-container #right-sidebar-inner .widget-title{
+	border-bottom: 2px solid #dbdbdb;
+	font-size: 16px;
+	margin-bottom: 0;
+}
+.clr .sidebar-container #right-sidebar-inner ul.bbp-topics-widget li a{
+	display: block;
+	padding-top: 20px;
+	font-weight: 600;
 }
