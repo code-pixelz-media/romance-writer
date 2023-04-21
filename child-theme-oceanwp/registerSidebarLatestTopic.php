@@ -1,4 +1,5 @@
 <?php 
+// registering custom sidebar
 // add_action( 'widgets_init', 'latest_topic_widgets' );
 // function latest_topic_widgets() {
 //     register_sidebar( array(

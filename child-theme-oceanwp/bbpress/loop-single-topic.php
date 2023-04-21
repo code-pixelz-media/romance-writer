@@ -78,7 +78,7 @@ defined('ABSPATH') || exit;
 			<?php bbp_topic_row_actions(); ?>
 
 		</li>
-
+<!-------------------------------- combine voices and posts data in sigle of topic table  --------------------------------------->
 		<li class="bbp-topic-voice-count">Voices: <?php bbp_topic_voice_count(); ?>
 
 			Posts: <?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?></li>
