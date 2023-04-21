@@ -4,7 +4,7 @@ function child_theme_oceanwp_enqueue_styles()
 {
 	wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('cpm-child-style', get_stylesheet_directory_uri() . '/style.css');
-	wp_enqueue_style('cpm-child-js', get_stylesheet_directory_uri() . '/main.js');
+	wp_enqueue_script('cpm-child-js', get_stylesheet_directory_uri() . '/main.js');
 }
 
 
@@ -38,4 +38,4 @@ add_filter('bbp_after_get_the_content_parse_args', function($args = array()){
 });
 
 
-include('registerSidebarLatestTopic.php');
+// include('registerSidebarLatestTopic.php');
